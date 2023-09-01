@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/">Home</a>
+<!--create a form that performs a GET request ont he path "VoteForBestMove"-->
+<!--The form should take a movie title as input and have a submit button-->
+<form action="voteForBestMovie" method="GET">
+    <label> Movie Title:
+        <input type="text" name="movieTitle" />
+    </label>
+    <p><input type="submit" value="Submit" /></p>
+</form>
+
+<p th:text="'Your favorite movie is: ' + ${BestMovieVote}" />
+</body>
+</html>
+
